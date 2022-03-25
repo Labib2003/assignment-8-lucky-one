@@ -1,10 +1,17 @@
 import React from 'react';
+import './Store.css'
 
 const Store = (props) => {
-    const {name, id, price} = props.product;
+    const { name, price, img } = props.product;
     return (
-        <div>
-            <p>{name}</p>
+        <div className='product'>
+            <div>
+                <img src={img} alt="" />
+            </div>
+            <div>
+                <p>{name}</p>
+                <p>Price: {price}</p>
+            </div>
         </div>
     );
 };

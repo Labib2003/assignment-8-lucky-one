@@ -16,9 +16,11 @@ function App() {
       <header>
         <h3>Toy store</h3>
       </header>
-      {
-        products.map(product => <Store key={product.id} product={product}></Store>)
-      }
+      <section className='products'>
+        {
+          products.map(product => <Store key={product.id} product={product}></Store>)
+        }
+      </section>
     </div>
   );
 }
