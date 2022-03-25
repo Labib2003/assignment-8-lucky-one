@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "name": "Playing Cards",
+        "img": "https://m.media-amazon.com/images/I/711TbIZxM9L._AC_UL320_.jpg",
+        "price": "50"
+    },
+    {
+        "id": 2,
+        "name": "Rubik's Cube",
+        "img": "https://m.media-amazon.com/images/I/71AFmVZJaoL._AC_UL320_.jpg",
+        "price": "150"
+    },
+    {
+        "id": 3,
+        "name": "Fidget Spinner",
+        "img": "https://m.media-amazon.com/images/I/819bIsSblfL._AC_UL320_.png",
+        "price": "100"
+    },
+    {
+        "id": 4,
+        "name": "Stress Ball",
+        "img": "https://m.media-amazon.com/images/I/61s2Iucp9bL._AC_UL320_.jpg",
+        "price": "60"
+    },
+    {
+        "id": 5,
+        "name": "Magnets",
+        "img": "https://m.media-amazon.com/images/I/61FFRLltwVL._AC_UY218_.jpg",
+        "price": "150"
+    },
+    {
+        "id": 6,
+        "name": "Uno cards",
+        "img": "https://m.media-amazon.com/images/I/81LcVsRKnjS._AC_UL320_.jpg",
+        "price": "50"
+    },
+    {
+        "id": 7,
+        "name": "Bobble Head",
+        "img": "https://m.media-amazon.com/images/I/61QfeXSBUuL._AC_UL320_.jpg",
+        "price": "200"
+    },
+    {
+        "id": 8,
+        "name": "Top",
+        "img": "https://m.media-amazon.com/images/I/71QNFIx-c+L._AC_UL320_.jpg",
+        "price": "90"
+    },
+    {
+        "id": 9,
+        "name": "Marbles",
+        "img": "https://m.media-amazon.com/images/I/61AcwBHRkZS._AC_UL320_.jpg",
+        "price": "60"
+    }
+]
