@@ -1,20 +1,20 @@
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
-import './Store.css'
+import React, { useEffect, useState } from 'react';
+import Product from '../Product/Product';
 
-const Store = (props) => {
-    const { name, price, img } = props.product;
+const Store = () => {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('data.json')
+            .then(res => res.json())
+            .then(data => setProducts(data));
+    }, [])
+
     return (
-        <div className='product'>
-            <div>
-                <img src={img} alt="" />
-            </div>
-            <div>
-                <p>{name}</p>
-                <p>Price: {price}</p>
-                <button>Add to list <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
-            </div>
+        <div className='products'>
+            {
+                products.map(product => <Product key={product.id} product={product}></Product>)
+            }
         </div>
     );
 };
