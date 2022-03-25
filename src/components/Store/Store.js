@@ -1,3 +1,5 @@
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Store.css'
 
@@ -11,6 +13,7 @@ const Store = (props) => {
             <div>
                 <p>{name}</p>
                 <p>Price: {price}</p>
+                <button>Add to list <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
             </div>
         </div>
     );
