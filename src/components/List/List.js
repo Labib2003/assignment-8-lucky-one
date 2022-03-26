@@ -10,7 +10,7 @@ const List = (props) => {
             const random = Math.floor(Math.random() * (max - 1));
             alert(selectedProducts[random].name);
         }
-        else{
+        else {
             alert('Please select some items first');
         }
     }
@@ -19,13 +19,15 @@ const List = (props) => {
         <div className='selected-toys'>
             <h3>Selected Toys</h3>
             <br />
-            {
-                selectedProducts.map(selectedProduct => <ListItem
-                    key={selectedProduct.id}
-                    selectedProduct={selectedProduct}
-                    removeItem={removeItem}
-                ></ListItem>)
-            }
+            <div className="items">
+                {
+                    selectedProducts.map(selectedProduct => <ListItem
+                        key={selectedProduct.id}
+                        selectedProduct={selectedProduct}
+                        removeItem={removeItem}
+                    ></ListItem>)
+                }
+            </div>
             <button className='list-interaction-buttons' onClick={selectRandom}>Select a random item</button>
             <br />
             <button className='list-interaction-buttons' onClick={clearList}>Clear List</button>

@@ -50,6 +50,7 @@ const Store = () => {
                     ></Product>)
                 }
             </div>
+            <br />
             <div>
                 <List
                     key={selectedProducts.length}

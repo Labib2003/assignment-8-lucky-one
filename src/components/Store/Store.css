@@ -7,4 +7,20 @@
 .store-container{
     display: flex;
     justify-content: space-around;
-  }
+}
+
+@media only screen and (max-width: 688px){
+    .products{
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media only screen and (max-width: 992px) {
+    .products{
+        grid-template-columns: 1fr 1fr;
+    }
+    .store-container{
+        display: block;
+    }
+}
