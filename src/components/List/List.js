@@ -28,7 +28,7 @@ const List = (props) => {
                     ></ListItem>)
                 }
             </div>
-            <button className='list-interaction-buttons' onClick={selectRandom}>Select a random item</button>
+            <button className='list-interaction-buttons' onClick={selectRandom}>Choose one for me!</button>
             <br />
             <button className='list-interaction-buttons' onClick={clearList}>Clear List</button>
         </div>

@@ -13,7 +13,7 @@ const Product = (props) => {
             </div>
             <div className='toy-info'>
                 <p>{name}</p>
-                <p>Price: {price}</p>
+                <p>Price: {price} Taka</p>
                 <br />
                 <button className='add-buttons' onClick={() => selectButton(id)}>Add to list <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
             </div>
