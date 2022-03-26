@@ -6,7 +6,8 @@ const List = (props) => {
     const selectRandom = () => {
         if (selectedProducts.length > 0) {
             const max = selectedProducts.length;
-            alert(selectedProducts[Math.floor(Math.random() * (max - 1))].name);
+            const random = Math.floor(Math.random() * (max - 1));
+            alert(selectedProducts[random].name);
         }
         else{
             alert('Please select some items first');
