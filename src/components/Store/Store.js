@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Product from '../Product/Product';
+import './Store.css'
 
 const Store = () => {
     const [products, setProducts] = useState([]);
+
 
     useEffect(() => {
         fetch('data.json')
