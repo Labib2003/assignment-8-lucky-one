@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
     return (
         <div>
-            <h2>Desk toys</h2>
+            <h1>Pick a random toy!</h1>
         </div>
     );
 };

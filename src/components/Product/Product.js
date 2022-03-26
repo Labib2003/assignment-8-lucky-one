@@ -11,10 +11,11 @@ const Product = (props) => {
             <div>
                 <img src={img} alt="" />
             </div>
-            <div>
+            <div className='toy-info'>
                 <p>{name}</p>
                 <p>Price: {price}</p>
-                <button onClick={() => selectButton(id)}>Add to list <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
+                <br />
+                <button className='add-buttons' onClick={() => selectButton(id)}>Add to list <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
             </div>
         </div>
     );

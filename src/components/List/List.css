@@ -1,0 +1,19 @@
+.selected-toys{
+    box-shadow: 0 0 5px 1px gray;
+    padding: 5px;
+}
+
+.list-interaction-buttons{
+    width: 330px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: orange;
+    transition: .1s ease-in-out;
+    margin-bottom: 10px;
+}
+
+.list-interaction-buttons:hover{
+    background-color: lime;
+    height: 35px;
+}

@@ -1,3 +1,5 @@
+import { faDeleteLeft, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './ListItem.css'
 
@@ -10,7 +12,7 @@ const ListItem = (props) => {
                 <img src={img} alt="" />
             </div>
             <p>{name}</p>
-            <button onClick={() => removeItem(id)}>delete</button>
+            <button className='delete-button' onClick={() => removeItem(id)}><FontAwesomeIcon icon={faTrash}></FontAwesomeIcon></button>
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import ListItem from '../ListItem/ListItem';
+import './List.css'
 
 const List = (props) => {
     const { selectedProducts, removeItem, clearList } = props;
@@ -15,8 +16,9 @@ const List = (props) => {
     }
 
     return (
-        <div>
-            <h3>This is a list</h3>
+        <div className='selected-toys'>
+            <h3>Selected Toys</h3>
+            <br />
             {
                 selectedProducts.map(selectedProduct => <ListItem
                     key={selectedProduct.id}
@@ -24,8 +26,9 @@ const List = (props) => {
                     removeItem={removeItem}
                 ></ListItem>)
             }
-            <button onClick={selectRandom}>Select a random item</button>
-            <button onClick={clearList}>Clear List</button>
+            <button className='list-interaction-buttons' onClick={selectRandom}>Select a random item</button>
+            <br />
+            <button className='list-interaction-buttons' onClick={clearList}>Clear List</button>
         </div>
     );
 };
