@@ -4,7 +4,8 @@ import React from 'react';
 import './Product.css'
 
 const Product = (props) => {
-    const {img, name, price} = props.product;
+    const { id, img, name, price } = props.product;
+    const { selectButton } = props;
     return (
         <div className='product'>
             <div>
@@ -13,7 +14,7 @@ const Product = (props) => {
             <div>
                 <p>{name}</p>
                 <p>Price: {price}</p>
-                <button>Add to list <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
+                <button onClick={() => selectButton(id)}>Add to list <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon></button>
             </div>
         </div>
     );

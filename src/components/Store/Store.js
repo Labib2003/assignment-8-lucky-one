@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from 'react';
+import List from '../List/List';
 import Product from '../Product/Product';
 import './Store.css'
 
 const Store = () => {
     const [products, setProducts] = useState([]);
 
+    const [selectedProducts, setSelectedProducts] = useState([]);
+
+    const selectButton = (id) => {
+        const newSelectedProducts = [...selectedProducts, products.find(product => product.id === id)]
+        setSelectedProducts(newSelectedProducts);
+    }
 
     useEffect(() => {
         fetch('data.json')
@@ -13,10 +20,22 @@ const Store = () => {
     }, [])
 
     return (
-        <div className='products'>
-            {
-                products.map(product => <Product key={product.id} product={product}></Product>)
-            }
+        <div className='store-container'>
+            <div className='products'>
+                {
+                    products.map(product => <Product
+                        key={product.id}
+                        product={product}
+                        selectButton={selectButton}
+                    ></Product>)
+                }
+            </div>
+            <div>
+                <List
+                    key={selectedProducts.length}
+                    selectedProducts={selectedProducts}>
+                </List>
+            </div>
         </div>
     );
 };
