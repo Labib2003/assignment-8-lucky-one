@@ -24,6 +24,11 @@ const Store = () => {
         }
     }
 
+    const removeItem = (id) => {
+        const newSelectedProducts = selectedProducts.filter(selectedProduct => selectedProduct.id !== id);
+        setSelectedProducts(newSelectedProducts);
+    }
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -44,7 +49,9 @@ const Store = () => {
             <div>
                 <List
                     key={selectedProducts.length}
-                    selectedProducts={selectedProducts}>
+                    selectedProducts={selectedProducts} 
+                    removeItem={removeItem}
+                    >
                 </List>
             </div>
         </div>
