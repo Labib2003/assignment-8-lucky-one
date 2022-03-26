@@ -1,8 +1,7 @@
 import ListItem from '../ListItem/ListItem';
 
 const List = (props) => {
-    const { selectedProducts } = props;
-    const { removeItem } = props;
+    const { selectedProducts, removeItem, clearList } = props;
 
     const selectRandom = () => {
         if (selectedProducts.length > 0) {
@@ -25,6 +24,7 @@ const List = (props) => {
                 ></ListItem>)
             }
             <button onClick={selectRandom}>Select a random item</button>
+            <button onClick={clearList}>Clear List</button>
         </div>
     );
 };

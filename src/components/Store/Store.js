@@ -29,6 +29,10 @@ const Store = () => {
         setSelectedProducts(newSelectedProducts);
     }
 
+    const clearList = () => {
+        setSelectedProducts([]);
+    }
+
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -50,7 +54,8 @@ const Store = () => {
                 <List
                     key={selectedProducts.length}
                     selectedProducts={selectedProducts} 
-                    removeItem={removeItem}
+                    removeItem={removeItem} 
+                    clearList={clearList}
                     >
                 </List>
             </div>
