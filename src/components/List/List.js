@@ -6,7 +6,7 @@ const List = (props) => {
         <div>
             <h3>This is a list</h3>
             {
-                props.selectedProducts.map(selectedProduct => <ListItem selectedProduct={selectedProduct}></ListItem>)
+                props.selectedProducts.map(selectedProduct => <ListItem key={selectedProduct.id} selectedProduct={selectedProduct}></ListItem>)
             }
         </div>
     );

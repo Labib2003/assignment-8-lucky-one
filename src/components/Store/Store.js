@@ -9,8 +9,19 @@ const Store = () => {
     const [selectedProducts, setSelectedProducts] = useState([]);
 
     const selectButton = (id) => {
-        const newSelectedProducts = [...selectedProducts, products.find(product => product.id === id)]
-        setSelectedProducts(newSelectedProducts);
+        if (selectedProducts.length >= 4) {
+            alert("You can't add more than 4 items.");
+        }
+        else {
+            const exists = selectedProducts.find(selectedProduct => selectedProduct.id === id);
+            if (exists) {
+                alert("You can't add duplicate items.");
+            }
+            else {
+                const newSelectedProducts = [...selectedProducts, products.find(product => product.id === id)]
+                setSelectedProducts(newSelectedProducts);
+            }
+        }
     }
 
     useEffect(() => {
